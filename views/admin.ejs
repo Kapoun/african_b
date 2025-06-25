@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f2f5f7;
+      margin: 0;
+      padding: 1rem;
+      max-width: 1024px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin: 1rem 0 2rem;
+      font-size: 1.8rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    thead {
+      background-color: #2ecc71;
+      color: #ffffff;
+    }
+
+    th, td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 0.95rem;
+    }
+
+    tr:hover {
+      background-color: #f9f9f9;
+    }
+
+    td {
+      color: #2c3e50;
+    }
+
+    th:first-child, td:first-child {
+      border-left: 5px solid #2ecc71;
+    }
+
+    @media screen and (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #eaeaea;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        color: #888;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>📋 Registered Members</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Full Name</th>
+        <th>Phone Number</th>
+        <th>Branch</th>
+        <th>Kijiji</th>
+        <th>Registered At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% users.forEach(user => { %>
+        <tr>
+          <td data-label="ID"><%= user.id %></td>
+          <td data-label="Full Name"><%= user.full_name %></td>
+          <td data-label="Phone Number"><%= user.phone_number %></td>
+          <td data-label="Branch"><%= user.branch %></td>
+          <td data-label="Kijiji"><%= user.kijiji %></td>
+          <td data-label="Registered At">
+            <% if (user.created_at) { %>
+              <%= new Date(user.created_at).toDateString() %>
+            <% } else { %>
+              N/A
+            <% } %>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<%- include("partials/header") %>
+
+<section class="contact">
+  <div class="contact-container">
+    <h2>We'd Love to Hear From You</h2>
+    <p>Got a question, testimony, or prayer request? Drop us a message and we'll respond with love and faith.</p>
+
+    <form action="/contact" method="POST" class="contact-form">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Full Name" required />
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="example@domain.com" required />
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" placeholder="Type your message here..." rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<%- include("partials/footer") %>

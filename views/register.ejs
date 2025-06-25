@@ -1,0 +1,185 @@
+<%- include("partials/header") %>
+<!-- Select2 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+
+<!-- jQuery (needed for Select2) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Select2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+
+<section class="register">
+  <div class="register-container">
+    <h2>Join Our Faithful Family</h2>
+    <p>Fill in your details below to register with AFRICAN KENYA SABCRYNNSK OF SOI PRAYING AND HEALING CHURCH. We're excited to welcome you!</p>
+    
+    <form action="/register" method="POST" class="register-form">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="full_name" placeholder="Your full name" required />
+    
+      <label for="number">Phone number:</label>
+      <input type="number" id="phone_number" name="phone_number" placeholder="example:0712345678" required />
+    
+      <label for="branch">Select Your Branch:</label>
+      <select id="branch" name="branch" required>
+        <option value="Nairobi">Nairobi</option>
+        <option value="Sayoni">HeadQuarter</option>
+        <option value="Uganda">Uganda</option>
+        <option value="Tanzania">Tanzania</option>
+         <option value="ERIGI">EREGI Mission</option>
+         <option value="SINA">SAINA MISSION </option>
+         <option value="IGUNGA  MISSION "> IGUNGA  MISSION </option>
+         <option value="KILINGILI MISSION "> KILINGILI MISSION  </option>
+         <option value="PAMOJA MISSION  " > PAMOJA MISSION   </option>
+         <option value="ELDORET MISSION "> ELDORET MISSION </option>
+         <option value="MOMBASA BRANCH"> MOMBASA BRANCH </option>
+         <option value="SHAMAKHOKHO MISSION"> SHAMAKHOKHO MISSION </option>
+         <option value="IMANI MISSION "> IMANI MISSION  </option> 
+         <option value="CHEPSUSWA MISSION "> CHEPSUSWA MISSION </option>
+         <option value="LWANJUSI MISSION "> LWANJUSI MISSION  </option>
+         <option value="MBALE MISSION"> MBALE MISSION </option>
+         <option value="BUDUDA MISSION"> BUDUDA MISSION </option>
+         <option value="MAGALE MISSION " > MAGALE MISSION  </option>
+         <option value="SIBWALA MISSION " > SIBWALA MISSION </option>
+         <option value="NAKURU MISSION"> NAKURU MISSION </option>
+         <option value="EREGI MISSION " > EREGI MISSION  </option>
+         <option value="SAINA MISSION" > SAINA MISSION </option>
+         <option value="IGUNGA  MISSION "> IGUNGA  MISSION  </option>
+         <option value="KILINGILI MISSION "> KILINGILI MISSION  </option>
+         <option value="PAMOJA MISSION  "> PAMOJA MISSION </option>
+         <option value="ELDORET MISSION "> ELDORET MISSION </option>
+
+
+      </select>
+
+      <label for="kijiji">Select Your Kijiji:</label>
+      <select id="kijiji" name="kijiji" required>
+     
+      <option value="Langata">Langata</option>
+      <option value="Kibera">Kibera</option>
+      <option value="Kawangware">Milimani</option>
+      <option value="Rongai">Rongai</option>
+      <option value="KHUSHIKULU">KHUSHIKULU</option>
+      <option value="ITUKHULA"> ITUKHULA</option>
+      <option value="MAKHOKHO">MAKHOKHO </option>
+      <option value="UPendo imusali"> UPENDO IMUSALI </option>
+      <option value="Shikuu"> SHIKHUYU </option>
+      <option valu="Shipalo"> SHIPALO </option>
+      <option value="Ivono"> IVONO </option>
+      <option value="IMUTAHO"> IMUTAHO </option>
+      <option value="SHIKANGANIA"> SHIKANGANIA </option>
+      <option value="LUKANJI JACTION"> LUKANJI JACTION </option>
+      <option value="AMALEMBA"> AMALEMBA </option>
+      <option value="MUGAVAGAVA"> MUGAVAGAVA </option>
+      <option value="MUKUYU"> MUKUYU </option>
+      <option value="KILINGILI"> KILINGILI </option>
+      <option value="GIVOLE"> GIVOLE </option>
+      <option vale="GALONI" > GALONI </option>
+      <option value="MWANGAZA"> MWANGAZA </option>
+      <option ale="IGAGARA"> IGAGARA </option>
+      <option value="MWITUKHO"> MWITUKHO </option>
+      <option value="IKINU"> IKINU </option>
+      <option value="ITANDO"> ITANDO </option>
+      <option value="MWANZO"> MWANZO </option>
+      <option value="SANGO KIPKAREN"> SANGO KIPKAREN </option> 
+      <option value="HURUMA  ELDORET" > HURUMA  ELDORET <option>
+      <option value="JOYLAND" > JOYLAND </option>
+      <option value="MOMONIAT"> MOMONIAT </option>
+      <option value="KONGOWEA" > KONGOWEA </option>
+      <option vaue="HARAMBEE"> HARAMBEE </option>
+      <option value="UKUNDA" > UKUNDA </option>
+      <option value="SHELL BEACH" > SHELL BEACH </option> 
+      <option value="SHAMAKHOKHO"> SHAMAKHOKHO </option>
+      <option value="KAMULEMBE"> KAMULEMBE </option>
+      <option value="LUSENGELI"> LUSENGELI </option>
+      <option value="MULUNDU"> MULUNDU </option>
+      <option value="MUSUNJI"> MUSUNJI </option>
+      <option value="IMANI"> IMANI </option>
+      <option value="MULIMANI"> MULIMANI </option>
+      <option value="CHIPKERUKE"> CHIPKERUKE </option>
+      <option value="CHEPCHOMBIRI"> CHEPCHOMBIRI </option>
+      <option value="CHEPSUSWA MISSION "> CHEPSUSWA MISSION </option>
+      <option value="CHEPSUSWA"> CHEPSUSWA </option>
+      <option value="CHEPKWENI"> CHEPKWENI </option>
+      <option value="KEMELOI"> KEMELOI </option>
+      <option value ="CHEPSUSWA"> CHEPSUSWA </option>
+      <option value ="CHEPKWENI"> CHEPKWENI </option>
+      <option value="KEMELOI"> KEMELOI </option>
+      <option value="KEMELOI"> KEMELOI </option>
+      <option value="LWANJUSI"> LWANJUSI </option>
+      <option value="NAMBOKO"> NAMBOKO </option> 
+      <option value="BUWAFULA"> BUWAFULA </option> 
+      <option value="BUGOBERO"> BUGOBERO </option>
+      <option value="KHOLOMO"> KHOLOMO </option>
+      <option value="BUWEBELE"> BUWEBELE </option>
+      <option value="NALONDO"> NALONDO </option>
+      <option value="ANGALIYA"> ANGALIYA </option>
+      <option value="ANGALIYA" > ANGALIYA </option>
+      <option value="MBALE"> MBALE </option>
+      <option value="SIBANGA"> SIBANGA </option>
+      <option value="NABWEYA"> NABWEYA </option>
+      <option value="MILUKHU"> MILUKHU </option>
+      <option value="BUWAKIYU"> BUWAKIYU </option>
+      <option value="BUMUKALI"> BUMUKALI </option>
+      <option value="MAGALE"> MAGALE </option>
+      <option value="KABOLE"> KABOLE </option>
+      <option value="SIBEMBE"> SIBEMBE </option>
+      <option value="KAMPALA"> KAMPALA </option>
+      <option value="MAGALE SIYEMBA" > MAGALE SIYEMBA </option>
+      <option value="SIBWALA"> SIBWALA </option>
+      <option value="LUTSEKHE"> LUTSEKHE </option>
+      <option value="SWEET WATER"> SWEET WATER </option>
+      <option value="NAKURU POSTA"> NAKURU POSTA </option>
+      <option value="MWANGAZA"> MWANGAZA </option>
+      <option value="JOGOO NKR"> JOGOO NKR </option>
+      <option value="MOLO MULIMANI"> MOLO MULIMANI </option>
+      <option value="KHUSHIKULU"> KHUSHIKULU </option>
+      <option value="ITUKHULA"> ITUKHULA </option> 
+      <option value="MAKHOKHO" > MAKHOKHO </option>
+      <option value="SAINA"> SAINA </option>
+      <option value="SHIKHUYU"> SHIKHUYU </option>
+      <option value="UPENDO IMUSALI"> UPENDO IMUSALI </option>
+      <option value="SHIPALO"> SHIPALO </option>
+      <option value="IVONO"> IVONO </option>
+      <option value="IMUTAHO"> IMUTAHO </option>
+      <option value="SHIKANGANIA"> SHIKANGANIA </option>
+      <option value="LUKANJI JACTION"> LUKANJI JACTION </option>
+      <option value="AMALEMBA"> AMALEMBA </option>
+      <option value="INGUNGA"> INGUNGA </option>
+      <option value="MUGAVAGAVA"> MUGAVAGAVA </option>
+      <option value="MUKUYU"> MUKUYU </option>
+      <option value="KILINGILI"> KILINGILI </option>
+      <option value="GIVOLE"> GIVOLE </option>
+      <option value="GALONI"> GALONI </option>
+      <option value="MWANGAZA"> MWANGAZA </option>
+      <option value=" IGAGARA"> IGAGARA </option>
+      <option value="MWITUKHO"> MWITUKHO </option>
+      <option value="IKINU"> IKINU </option>
+      <option value=" ITANDO"> ITANDO </option>
+      <option value="MWANZO"> MWANZO </option>
+      <option value="SANGO KIPKAREN"> SANGO KIPKAREN </option>
+      <option value="HURUMA  ELDORET"> HURUMA  ELDORET </option>
+      <option value="JOYLAND"> JOYLAND </option>
+      <option value="MOMONIAT"> MOMONIAT </option>
+
+
+</select>
+
+   <script>
+  $(document).ready(function() {
+    $('#branch').select2();  // Make branch select searchable
+    $('#kijiji').select2();  // Make kijiji select searchable
+  });
+</script>
+   
+   
+
+
+
+      <button type="submit">Complete Registration</button>
+    </form>
+    
+  </div>
+</section>
+
+<%- include("partials/footer") %>
